@@ -1,10 +1,10 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const AuthRouter= require('./routes/AuthRouter.js')
 
-require("dotenv").config();
 require("./models/db.js")
 
 const PORT = process.env.PORT || 8000;
