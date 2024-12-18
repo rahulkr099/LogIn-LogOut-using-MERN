@@ -95,7 +95,7 @@ function Signup() {
         </div>
        <button type='submit' className=''>Signup</button>
        <span>Already Have an account?
-        <Link to='/login'>Login</Link>
+        <Link to='/login' className='text-blue-800 m-1 hover:text-green-400'>Login</Link>
        </span>
     </form>
     </div>
