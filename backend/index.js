@@ -7,7 +7,7 @@ const AuthRouter= require('./routes/AuthRouter.js')
 require("dotenv").config();
 require("./models/db.js")
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 8000;
 //bodyparser to parse frontend data
 app.use(bodyParser.json());
 //cors to handle cors policy
