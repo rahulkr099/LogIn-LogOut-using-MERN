@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 8000;
 app.use(bodyParser.json());
 //cors to handle cors policy
 app.use(cors({
-    origin: 'https://log-in-log-out-using-mern-frontend.vercel.app/', // Replace with your frontend URL
+    origin: 'https://log-in-log-out-using-mern-frontend.vercel.app', // Replace with your frontend URL
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true, // Allow cookies/auth headers
 }));
