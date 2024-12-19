@@ -11,7 +11,14 @@ const PORT = process.env.PORT || 8000;
 //bodyparser to parse frontend data
 app.use(bodyParser.json());
 //cors to handle cors policy
-app.use(cors());
+app.use(cors({
+    origin: 'https://log-in-log-out-using-mern-frontend.vercel.app', // Replace with your frontend URL
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true, // Allow cookies/auth headers
+}));
+
+// Preflight request handling
+app.options('*', cors());
 app.get('/ping',(req,res)=>{
     res.send('PONG');
 })
