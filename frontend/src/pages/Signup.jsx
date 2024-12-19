@@ -26,7 +26,7 @@ function Signup() {
             return handleError('name, email or password required')           
         }
         try{
-            const url = "http://localhost:3000/auth/signup";
+            const url = "https://log-in-log-out-using-mern-backend.vercel.app/auth/signup";
             const response = await fetch(url,{
                 method:"POST",
                 headers:{
@@ -53,10 +53,10 @@ function Signup() {
         }
     }
   return (
-    <div className='text-2xl p-4 flex flex-col justify-center items-center'>
-        <h1 className='text-xl underline text-center'>Signup</h1>
+    <div className='text-2xl p-4 flex flex-col h-screen justify-center items-center bg-auto bg-no-repeat bg-center bg-[url("../public/7639.jpg")]'>
+        <h1 className='text-3xl underline text-center'>Signup</h1>
     <div>
-    <form onSubmit={handleSignup} className='flex flex-col justify-center items-start border-2 border-green-400 m-4 p-2 rounded-lg shadow-lg'>
+    <form onSubmit={handleSignup} className='flex flex-col justify-center items-start border-2 border-blue-400 m-4 p-6 rounded-lg shadow-2xl bg-gradient-to-r from-sky-400 to-indigo-300'>
         <div className=''>
             <label htmlFor='name'>Name:</label>
             <input
@@ -93,9 +93,11 @@ function Signup() {
                 value={signupInfo.password}
             />
         </div>
-       <button type='submit' className=''>Signup</button>
+       <div className='w-full text-center'>
+       <button type='submit' className='text-white m-1 border border-green-400 rounded-lg p-1 bg-green-400 hover:text-black'>Signup</button>
+       </div>
        <span>Already Have an account?
-        <Link to='/login' className='text-blue-800 m-1 hover:text-green-400'>Login</Link>
+        <Link to='/login' className='hover:text-white'> Login</Link>
        </span>
     </form>
     </div>

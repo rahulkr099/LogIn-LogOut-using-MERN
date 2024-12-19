@@ -25,7 +25,7 @@ function Login() {
             return handleError('email or password required')           
         }
         try{
-            const url = "http://localhost:3000/auth/login";
+            const url = "https://log-in-log-out-using-mern-backend.vercel.app/auth/login";
             const response = await fetch(url,{
                 method:"POST",
                 headers:{
@@ -54,9 +54,9 @@ function Login() {
         }
     }
   return (
-    <div className='p-4 text-2xl flex flex-col justify-center items-center'>
-        <h1 className='text-center underline'>Login Page</h1>
-    <div className='m-4 border-2 border-green-400 shadow-xl rounded-lg'>
+    <div className='p-4 text-2xl flex flex-col justify-center items-center h-screen bg-gradient-to-r from-violet-400 to-fuchsia-400'>
+        <h1 className='text-3xl text-center underline'>Login Page</h1>
+    <div className='m-4 border-2 p-3 border-purple-400 rounded-xl shadow-2xl bg-purple-300 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-50 '>
     <form className='flex flex-col justify-center items-start m-4 ' onSubmit={handleLogin}>
         
         <div>
@@ -87,7 +87,7 @@ function Login() {
        <button className='text-2xl bg-green-400 p-1 rounded-md hover:text-white m-2' type='submit'>Login</button>
         </div>
        <span>Do not have an account?
-        <Link to='/signup' className='text-blue-800 m-1 hover:text-green-400'>Signup</Link>
+        <Link to='/signup' className='text-blue-700 m-1 hover:text-white'>Signup</Link>
        </span>
        
     </form>
